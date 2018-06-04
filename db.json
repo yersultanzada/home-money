@@ -11,6 +11,12 @@
       "password": "admin123",
       "name": "Yersultan",
       "id": 2
+    },
+    {
+      "email": "test@mail.ru",
+      "password": "test123",
+      "name": "test",
+      "id": 3
     }
   ],
   "bill": {
