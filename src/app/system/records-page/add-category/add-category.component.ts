@@ -1,4 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import  {NgForm } from '@angular/forms';
+import {CategoriesService} from '../../shared/services/categories.service';
+import {Category} from '../../shared/models/category.model';
+import {log} from 'util';
 
 @Component({
   selector: 'wfm-add-category',
@@ -7,9 +11,21 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AddCategoryComponent implements OnInit {
 
-  constructor() { }
+  constructor(private categoriesService: CategoriesService) { }
 
   ngOnInit() {
   }
 
+
+  onSubmit(form: NgForm) {
+    let {name, capacity} = form.value;
+    if (capacity < 0) {capacity *= -1;}
+
+    const category = new Category(name, capacity);
+
+    this.categoriesService.addCategory(category)
+      .subscribe((category: Category) => {
+        console.log(category);
+      });
+  }
 }
