@@ -1,8 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import  {NgForm } from '@angular/forms';
+import {NgForm } from '@angular/forms';
 import {CategoriesService} from '../../shared/services/categories.service';
 import {Category} from '../../shared/models/category.model';
-import {log} from 'util';
 
 @Component({
   selector: 'wfm-add-category',
