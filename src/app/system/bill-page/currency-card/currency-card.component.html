@@ -15,13 +15,13 @@
           </thead>
           <tbody>
           <tr>
-            <td>RUB</td>
-            <td>1</td>
+            <td>USD</td>
+            <td>{{ currency.rates['KZT'] / currency.rates['USD'] | number:'1.2' }} KZT</td>
             <td>{{ currency.date | wfmMoment: 'YYYY-MM-DD' }}</td>
           </tr>
-          <tr *ngFor="let c of currencies">
-            <td>{{ c }}</td>
-            <td>{{ currency.rates[c] }}</td>
+          <tr>
+            <td>EUR</td>
+            <td>{{ currency.rates['KZT'] | number:'1.2' }} KZT</td>
             <td>{{ currency.date | wfmMoment: 'YYYY-MM-DD' }}</td>
           </tr>
           </tbody>

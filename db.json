@@ -38,11 +38,6 @@
       "id": 3,
       "name": "Машина",
       "capacity": 7000
-    },
-    {
-      "name": "Новая1",
-      "capacity": 1000,
-      "id": 4
     }
   ],
   "events": [
