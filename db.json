@@ -17,10 +17,16 @@
       "password": "test123",
       "name": "test",
       "id": 3
+    },
+    {
+      "email": "timur@gmail.com",
+      "password": "qwerty123",
+      "name": "Тимур",
+      "id": 4
     }
   ],
   "bill": {
-    "value": 100000,
+    "value": 90500,
     "currency": "RUB"
   },
   "categories": [
@@ -38,6 +44,16 @@
       "id": 3,
       "name": "Машина",
       "capacity": 7000
+    },
+    {
+      "name": "Работа",
+      "capacity": 5000,
+      "id": 4
+    },
+    {
+      "name": "Отпуск",
+      "capacity": 10000,
+      "id": 5
     }
   ],
   "events": [
@@ -80,6 +96,46 @@
       "date": "10.06.2017 14:01:58",
       "id": 5,
       "description": "Заправка + проход ТО"
+    },
+    {
+      "type": "outcome",
+      "amount": 1500,
+      "category": 3,
+      "date": "08.06.2018 11:19:10",
+      "description": "Замена масла",
+      "id": 6
+    },
+    {
+      "type": "outcome",
+      "amount": 500,
+      "category": 4,
+      "date": "08.06.2018 11:22:32",
+      "description": "Такси",
+      "id": 7
+    },
+    {
+      "type": "outcome",
+      "amount": 1500,
+      "category": 3,
+      "date": "08.06.2018 11:24:06",
+      "description": "test",
+      "id": 8
+    },
+    {
+      "type": "outcome",
+      "amount": 5000,
+      "category": 5,
+      "date": "08.06.2018 11:56:46",
+      "description": "Билет",
+      "id": 9
+    },
+    {
+      "type": "outcome",
+      "amount": 1000,
+      "category": 5,
+      "date": "08.06.2018 11:57:13",
+      "description": "test",
+      "id": 10
     }
   ]
 }
