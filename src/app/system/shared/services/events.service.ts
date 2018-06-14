@@ -4,6 +4,7 @@ import {Observable} from 'rxjs/Observable';
 
 import {BaseApi} from '../../../shared/core/base-api';
 import {WFMEvent} from '../models/event.model';
+import {Category} from '../models/category.model';
 
 @Injectable()
 export class EventsService extends  BaseApi {
@@ -18,4 +19,9 @@ export class EventsService extends  BaseApi {
   getEvents(): Observable<WFMEvent> {
     return this.get('events');
   }
+
+  getEventById(id: string): Observable<WFMEvent> {
+    return this.get(`events/${id}`);
+  }
+
 }
