@@ -6,7 +6,7 @@ import { Bill } from '../models/bill.model';
 import { BaseApi } from '../../../shared/core/base-api';
 
 @Injectable()
-export class BillService extends BaseApi{
+export class BillService extends BaseApi {
   constructor(public http: Http) {
     super(http);
   }

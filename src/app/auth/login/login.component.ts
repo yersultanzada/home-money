@@ -6,11 +6,13 @@ import { UsersService } from '../../shared/services/users.service';
 import { User } from '../../shared/models/user.model';
 import { Message } from '../../shared/models/message.model';
 import { AuthService } from '../../shared/services/auth.service';
+import {fadeStateTrigger} from '../../shared/animations/fade.animation';
 
 @Component({
   selector: 'wfm-login',
   templateUrl: './login.component.html',
-  styleUrls: ['./login.component.scss']
+  styleUrls: ['./login.component.scss'],
+  animations: [fadeStateTrigger]
 })
 export class LoginComponent implements OnInit {
 
@@ -33,6 +35,11 @@ export class LoginComponent implements OnInit {
           this.showMessage({
             text: 'Теперь Вы можете зайти в систему',
             type: 'success'
+          });
+        } else if (params['accessDenied']) {
+          this.showMessage({
+            text: 'Для работы с системой вам необходимо войти',
+            type: 'warning'
           });
         }
       });

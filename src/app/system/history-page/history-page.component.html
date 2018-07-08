@@ -10,14 +10,14 @@
 </div>
 
 <div *ngIf="!isLoaded" class="text-center">
-  Loading ...
+  <wfm-loader></wfm-loader>
 </div>
 <div *ngIf="isLoaded">
   <wfm-history-chart [data]="chartData"></wfm-history-chart>
 
   <wfm-history-events
     [categories]="categories"
-    [events]="events"
+    [events]="filteredEvents"
   ></wfm-history-events>
   <div *ngIf="isFilterVisible">
     <wfm-history-filter
