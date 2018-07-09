@@ -1,12 +1,13 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
-import {ActivatedRoute, Params, Router} from '@angular/router';
+import { ActivatedRoute, Params, Router } from '@angular/router';
+import { Meta, Title } from '@angular/platform-browser';
 
 import { UsersService } from '../../shared/services/users.service';
 import { User } from '../../shared/models/user.model';
 import { Message } from '../../shared/models/message.model';
 import { AuthService } from '../../shared/services/auth.service';
-import {fadeStateTrigger} from '../../shared/animations/fade.animation';
+import { fadeStateTrigger } from '../../shared/animations/fade.animation';
 
 @Component({
   selector: 'wfm-login',
@@ -24,7 +25,15 @@ export class LoginComponent implements OnInit {
     private authService: AuthService,
     private router: Router,
     private route: ActivatedRoute,
-  ) { }
+    private title: Title,
+    private meta: Meta
+  ) {
+    title.setTitle('Вход в систему');
+    meta.addTags([
+      { name: 'keywords', content: 'логин, вход, система' },
+      { name: 'description', content: 'Страница для входа в систему' }
+    ]);
+  }
 
   ngOnInit() {
     this.message = new Message('danger', '');
